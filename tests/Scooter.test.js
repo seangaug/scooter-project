@@ -3,11 +3,11 @@ const User = require('../src/User')
 
 //typeof scooter === object
 describe('scooter object', () => {
-  test('does something', () => {
-    // edit this to be a real test!
-    expect(false).toEqual(true);
-  }
-)
+  test('New instance of scooter created', () => {
+    let scooter1 = new Scooter("Manchester", "Sean", 1000, 1001, 50, false)
+      expect(typeof scooter1).toBe("object");
+    }
+  )
 })
 
 //Method tests
