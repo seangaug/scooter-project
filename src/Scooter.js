@@ -1,11 +1,14 @@
 class Scooter{
-  constructor(station, user, serial, nextSerial, charge, isBroken) {
+
+  static nextSerial = 0;
+
+  constructor(station) {
     this.station = station;
-    this.user = user;
-    this.serial = serial;
-    this.nextSerial = nextSerial;
-    this.charge = charge;
-    this.isBroken = isBroken;
+    this.user = null;
+    this.serial = Scooter.nextSerial;
+    Scooter.nextSerial++;
+    this.charge = 100;
+    this.isBroken = false;
   }
 
   rent()  {
