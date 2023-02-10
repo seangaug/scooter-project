@@ -12,7 +12,11 @@ class Scooter{
   }
 
   rent()  {
-    
+    if(this.charge < 21) {
+      throw new Error("scooter needs to charge");
+    } else if (this.isBroken) {
+      throw new Error("scooter needs repair")
+    }
   }
 
   dock(station) {
